@@ -17,13 +17,6 @@ export default function (){
 
     const {number}=useParams()
 
-//fare una classe per le carte coperte 
-
-//farne una per le carte scoperte 
-
-//fare una funzione che al click sulla carta 
-//la aggiunge ad un array che contiene le carte pescate - ok
-
     const [cartePescate,setCartePescate]=useState([]);
 
     const mischiaMazzo=()=>{
@@ -79,7 +72,7 @@ export default function (){
       };
     return (
         <>
-            <div className="bg-gradient-to-b from-second to-quart tarot-page">
+            <div className="bg-gradient-to-b from-second to-quart tarot-page p-4 h-max overflow-scroll bg-scroll">
                 <button className=""
                     onClick={()=>{
                         mischiaMazzo()
@@ -89,7 +82,7 @@ export default function (){
                         {mazzoMischiato.map(((card,i)=>{
                             return(
                                 <div
-                                    className={`tarot flex-shrink-0 relative`} 
+                                    className={`tarot flex-shrink-0 relative pile`} 
                                     key={`card-${i}`}
                                     onClick={()=>{
                                         chooseACard(card)

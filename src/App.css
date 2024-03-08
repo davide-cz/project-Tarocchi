@@ -13,7 +13,7 @@
         @apply mb-0 align-bottom saturate-200 contrast-125
     }
     .cards-container{
-        @apply flex flex-wrap p-5 justify-center
+        @apply flex flex-wrap p-2  justify-center gap-2 text-center 
         
     }
     .dialog-modal{
@@ -33,13 +33,28 @@
     }
 }
 
+
 .relative + .relative {
+    
     margin-left: -6rem;
+    @media (max-width: 640px)  {
+        margin-left: 0rem;
+        
+    } 
+}
     /* Esempio di margine negativo */
-  }
+   
 
  .tarot-page{
     height:92vh;
  }
 
+ @media (max-width: 640px){
+    
+        .tarot{
+            @apply w-20 h-28 border-8 border-emerald-900 overflow-hidden rounded-md shadow-md
+            hover:-translate-y-5 transition hover:brightness-75 hover:border-emerald-950
+        }
+    
+ }
  
