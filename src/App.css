@@ -1,0 +1,45 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+@layer base {
+    
+    .tarot{
+        @apply w-28 h-40 border-8 border-emerald-900 overflow-hidden rounded-md shadow-md
+        hover:-translate-y-5 transition hover:brightness-75 hover:border-emerald-950
+    }
+    .tarot-img>img{
+        @apply mb-0 align-bottom saturate-200 contrast-125
+    }
+    .cards-container{
+        @apply flex flex-wrap p-5 justify-center
+        
+    }
+    .dialog-modal{
+        @apply w-52 h-80 
+    }
+
+    .selected-card{
+        @apply transition hover:scale-110
+
+    }
+
+    .results{
+        @apply gap-4 
+    }
+    button{
+        @apply border-4 border-amber-600 text-quart hover:bg-amber-600 hover:text-terz rounded-md px-2
+    }
+}
+
+.relative + .relative {
+    margin-left: -6rem;
+    /* Esempio di margine negativo */
+  }
+
+ .tarot-page{
+    height:92vh;
+ }
+
+ 

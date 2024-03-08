@@ -1,0 +1,159 @@
+[
+    {
+        "number":"1",
+        "name":"mago",
+        "straightLecture":"Il Mago è indice di capacità, genio ed ispirazione. E' simbolo di cambiamento e di buona riuscita. Va associato ad altri arcani per cogliere al meglio il suo significato",
+        "reverseLecture":"il Mago rovescio può indicare una scelta sbagliata od il porsi nella maniera errata rispetto alle proprie scelte. Puo' essere necessario di rivedere le scelte personali o cambiare completamente direzione.",
+        "urlImg":"./tarots/1.png"
+    },
+    {
+        "number":"2",
+        "name":"Alta Sacerdotessa",
+        "straightLecture":"L'alta Sacerdotessa rappresenta l'introspezione, la riflessione e la ricerca dell'armonia. Suggerisce di sostituire alla fretta e all'impulsività la presa di decisioni guidate dalla saggezza, oltre a rinsaldare il rapporto con se stessi",
+        "reverseLecture":"L'alta Sacerdotessa rovescia mette in luce l'eccesso di riservatezza e introspezione, oltre alla chiusura verso cio' che puo' portare al cambiamento. Puo' indicare inoltre un eccesso di silenzio e cattiva comunicazione con le altre persone",
+        "urlImg":"./tarots/2.png"
+    },
+    {
+        "number":"3",
+        "name":"imperatrice",
+        "straightLecture":"L'Imperatrice è simbolo di protezione verso ciò che di nuovo si prospetta nella vita, ma anche di serenita' e legami che diventano più forti. Fa riferimento comunque al lato piu' emotivo e spirituale piuttosto che a quello materialista ",
+        "reverseLecture":"L'imperatrice al rovescio indica l'eccesso di austerita' e di senso di superiorita' come l'ostentazione di una sicurezza che non c'e', oppure anche il non riuscire ad accettare un nuovo legame perche' non si riesce a comunicare. Potrebbe indicare ancheil non riuscire a portare a termine le promesse",
+       
+        "urlImg":"./tarots/3.png"
+    },
+    {
+        "number":"4",
+        "name":"imperatore",
+        "straightLecture":"L'imperatore simboleggia l'autorita' e la capacita' di mantenere la leadership. Rappresenta fermezza e decisione, la sua giustizia non viene messa in discussione",
+        "reverseLecture":"L'imperatore rovesciato puo' indicare una figura che cerca di imporre il proprio controllo, un'ambizione tossica e calcolatrice che mira ad avvantaggiarsi sugli altri",
+       
+        "urlImg":"./tarots/4.png"
+    },
+    {
+        "number":"5",
+        "name":"Gran Sacerdote",
+        "straightLecture":"Il gran Sacerdote indica la saggezza che dissipa i dubbi attraverso una profonda fede. Inoltre e' simbolo di fermezza, incorruttibilita e anti-materialismo, '",
+        "reverseLecture":"Il gran Saceerdote rovesciato puo' mettere in rilievo un eccessivo dogmatismo, cioe' di non riuscire a vedere cio' che c'e' di sbagliato perche' non lo si vuole accettare, indica corruttibilita', ipocrisia e chiusura mentale",
+        "urlImg":"./tarots/5.png"
+    },
+    {
+        "number":"6",
+        "name":"amanti",
+        "straightLecture":"Gli Amanti simboleggiano l'amore e la sua forza, la volonta' di impegnarsi attraverso scelte ponderate ed equilibrate. Puo' presagire anche l'avvento di  una importante decisione da dover prendere ",
+        "reverseLecture":"Gli Amanti rovesciati rivelano conflitti in atto, insoddisfazione e propensione al solo piacere fisico. l'incapacita' di portare a termine le proprie questioni causa dolore e frustazione",
+        "urlImg":"./tarots/6.png"
+    },
+    {
+        "number":"7",
+        "name":"carro",
+        "straightLecture":"Il Carro rappresenta la vittoria e il successo, un periodo di stabilita' e di rinnovata autostima. Puo' anche rappresentare un periodo di sfida affrontato però con fermezza",
+        "reverseLecture":"Il Carro rovesciato puo' indicare eccessiva ostinazione che non permette di migliorarsi e di riuscire negli intenti. O l'incapacità di prendere una direzione netta e non avere la fermezza necessaria ad affrontare le sfide.",
+        "urlImg":"./tarots/7.png"
+    },
+    {
+        "number":"8",
+        "name":"forza",
+        "straightLecture":"La Forza, rappresenta il potere interiore, la capacita' di sostenere le sfide del momento con determinazione ed autocontrollo, oltre che a dominare le proprie paure e insicurezze, senza lasciarsi sopraffare",
+        "reverseLecture":"La Forza, quando rovesciata, puo' indicare la mancanza di questa e, di conseguenza, l'incapacita' di riuscire nei prorpri intenti. Puo' anche indicare la difficolta' di controllarsi e quindi la tendenza a cedere alla rabbia e alla frustrazione ",
+        "urlImg":"./tarots/8.png"
+    },
+    {
+        "number":"9",
+        "name":"eremita",
+        "straightLecture":"L'Eremita e' una figura di saggezza e introspezione, indica un viaggio interiore solitario e profondo che non puo' essere accompagnato da altre persone. un viaggio lungo che portera' ad una buona riuscita",
+        "reverseLecture":"L'Eremita rovesciato porta con se' un eccessiva chiusura e ristagnazione, tanto che puo' portare alla regressione personale. La prudenza eccessiva porta all'inazione e al non riuscire a prendere l'iniziativa",
+        "urlImg":"./tarots/9.png"
+    },
+    {
+        "number":"10",
+        "name":"ruota della fortuna",
+        "straightLecture":"La Ruota della Fortuna indica buona sorte nel breve periodo, a patto che si riescano a coglire le opportunita'. E' necessario comunque mantenere la lucidita' e non farsi trasportare unicamente dagli eventi.",
+        "reverseLecture":"La Ruota della Fortuna al rovescio puo' presagire un periodo in cui si possono palesare delle difficolta' e in generale il consiglio e' di evitare i cambiamenti e nuove imprese perche' potrebbero fallire miseramente",
+        "urlImg":"./tarots/10.png"
+    },
+    {
+        "number":"11",
+        "name":"giustizia",
+        "straightLecture":"La Giustizia indica l'accettazione delle conseguenze di cio' che abbiamo fatto e la presa di responsabilita'.Puo' essere intesa anche come il dover mantenere il controllo nelle situazioni piu' difficili.  ",
+        "reverseLecture":"La Giustizia rovesciata puo' simboleggiare la tendenza ad avere un giudizio troppo rigido che rischia di mettere in pericolo gli equilibri personali e i rapporti. Puo' anche rivelare l'incertezza degli eventi presenti e prossimi",
+        "urlImg":"./tarots/11.png"
+    },
+    {
+        "number":"12",
+        "name":"appeso",
+        "straightLecture":"L'Appeso indica che e' il momento di fermarsi e di rivedere le proprie scelte attraverso una nuova prospettiva. Puo' intendere il dover sacrificare una parte di se' per una possibile ricompensa che non sara' immediata e materiale, ma interiore",
+        "reverseLecture":"L'Appeso rovesciato indica una situazione difficile e sfavorevole, la presenza di dubbi e l'incertezza nel compiere scelte giuste. puo' rappresentare l'incapacita' di mettersi in discussione e di non essere in grado di essere sinceri con se stessi e con gli altri",
+        "urlImg":"./tarots/12.png"
+    },
+    {
+        "number":"13",
+        "name":"morte",
+        "straightLecture":"La Morte indica la fine di qualcosa e potersi lasciare alle spalle situazioni passate, pronti per una nuovo percorso. La fine puo' essere abbastanza dolorosa, ma apre la possibilita' al cambiamento",
+        "reverseLecture":"La Morte al rovescio rappresenta un grande dolore,sia fisico che interiore e puo' essere accompagnata dal fallimento. Il pericolo e' quello che ,nella disperazione, ci si lasci andare; e non e' una situazione che si risolvera' presto",
+        
+        "urlImg":"./tarots/13.png"
+    },
+    {
+        "number":"14",
+        "name":"temperanza",
+        "straightLecture":"La Temperanza e' un simbolo del flusso costante della vita. La calma e la fiducia, come l'equilibrio, sono necessari al raggiungimento dei propri scopi, nonostante qualcosa si possa mettere di traverso   ",
+        "reverseLecture":"La Temperanza rovesciata rivela squilibrio e un'impulsivita' dannosa che sovrasta la razionalita'. Indica un'eccesso di vizi e soddisfazione che svanisce in fretta. Puo' rappresentare anche la chiusura mentale e l'incoerenza con se stessi.",
+        "urlImg":"./tarots/14.png"
+    },
+    {
+        "number":"15",
+        "name":"diavolo", 
+        "straightLecture":"Il diavolo e' simbolo di tentazione e dipendenza e incarna la necessita' di interrogarsi su se stessi. Puo' rivelare una ricaduta nei vizi o un presagio di peggioramento delle proprie condizioni",
+        "reverseLecture":"Il Diavolo rovesciato Indica la possibilita' di liberarsi dall'oppressione. Una nuova liberta' guidata dall'audacia, la sorte puo' essere favorevole se assistita dalle proprie passioni",
+        "urlImg":"./tarots/15.png"
+    },
+    {
+        "number":"16",
+        "name":"torre",
+        "straightLecture":"La Torre puo' essere considerata come un avvertimento, e' necessario un cambiamento repentino perche' superbia e presunzione potrebbero essere la causa dell'imminente fallimento o disastro. Ma la nuova strada intrapresa potrebbe buone novita'",
+        "reverseLecture":"La Torre rovesciata e' presagio di possibile sventura, puo' indicare l'imminente perdita. E' indispensabile evitare situazioni dannose e nuovi viaggi. ",
+        "urlImg":"./tarots/16.png"
+    },
+    {
+        "number":"17",
+        "name":"stella",
+        "straightLecture":"La stella porta con se la previsione di un periodo positivo, la sttrada intrapresa portera' buoni risultati ed anche irapporti con se' e con gli altri saranno migliori",
+        "reverseLecture":"La Stella rovesciata indica una sorte potenzialmente sfavorevole, un periodo difficile e frustrante a livello personale. Portare a termine i propri impegni, cosi' come mantenere le relazioni sarà problematico e non sara' esclusa la rottura di queste.    ",
+        "urlImg":"./tarots/17.png"
+    },
+    {
+        "number":"18",
+        "name":"luna",
+        "straightLecture":"La Luna rivela il bisogno di rivolgersi alla propria parte interiore e di prenderso un momento di riflessione, su se' stessi e cio' da cui si e' circondati. Puo' condurre a soluzioni inaspettate ",
+        "reverseLecture":"La Luna rovesciata funge da monito, la crisi puo' essere imminente e mantenere una visione critica sara' necessario. Occorre mantenere la veglia su se stessi e il circondario perche' si possono presentare situazioni avverse",
+        "urlImg":"./tarots/18.png"
+    },
+    {
+        "number":"19",
+        "name":"sole",        
+        "straightLecture":"Il Sole lascia intendere che il buio e' alle spalle e la via che ci aspetta e' illuminata. E' simbolo di successo, ma la strada non vuol dire che sia per forza in discesa ",
+        "reverseLecture":"Il Sole capovolto presagisce un possibile abbaglio. Puo' essere dovuto all'opinione troppo alta di se stessi od aver ignorato di proposito i problemi che si sono incontrati. Indica anche una felicita'apparente o destinata a durare poco",
+        "urlImg":"./tarots/19.png"
+    },
+    {
+        "number":"20",
+        "name":"giudizio",
+        "straightLecture":"il Giudizio e' un simbolo generalmente positivo, e' relativo a un accadimento inaspettato e improvviso. E' anche simbolo di indipendenza e puo' portare un cambiamento rapido che migliorera' le normali circostanze",
+        "reverseLecture":"Il Giudizio rovesciato simboleggia una forza che ostacola il cambiamento che viene cosi' continuamente rimandato. La resistenza al cambiamento puo' dipendere dagli atteggiamenti personali o anche dalle circostanze e puo' portare ad uno stallo. Puo' rivelare inoltre un cambiamento forzato che portera' dei disagi   ",
+        "urlImg":"./tarots/20.png"
+    },
+    {
+        "number":"21",
+        "name":"mondo",
+        "straightLecture":"Il Mondo e' un simbolo di successo e positività duraturi, cio' che si presenta davanti e' facilmente superabile con impegno e dedizione. Le previsioni sono molto favorevoli e la lunga attesa sara' finalmente ripagata.",
+        "reverseLecture":"Il Mondo rovesciato non ha un'accezione interamente negativa, ma il traguardo non e' ancora vicino e occorre non demordere. Ci sara' qualche ostacolo prima della fine e la fretta sara' una cattiva consigliera cos' come l'orgoglio e la mancanza di umilta'. ",
+        "urlImg":"./tarots/21.png"
+    },
+    {
+        "number":"0",
+        "name":"matto",
+        "straightLecture":"il Matto rappresenta irrazionalità, spensieratezza e buona sorte, come l'inizio di un nuovo percorso sia fisico che personale. L'istinto sarà la guida delle prossime decisioni",
+        "reverseLecture":"il Matto rovescio indica incapacità di fare una scelta giusta, inconcludenza nella vita od ossessione. Può essere necessario rimettere ordine nei propri pensieri e rivedere le proprie priorità ",
+        "urlImg":"./tarots/0.png"
+    }
+]
