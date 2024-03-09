@@ -6,14 +6,18 @@
 @layer base {
     
     .tarot{
-        @apply w-28 h-40 border-8 border-emerald-900 overflow-hidden rounded-md shadow-md
-        hover:-translate-y-5 transition hover:brightness-75 hover:border-emerald-950
+        @apply w-28 h-40 border-8 border-quint overflow-hidden rounded-md shadow-md
+        hover:-translate-y-5 transition hover:brightness-75 hover:border-terz
+    }
+
+    img{
+        @apply saturate-200 contrast-125
     }
     .tarot-img>img{
-        @apply mb-0 align-bottom saturate-200 contrast-125
+        @apply mb-0 align-bottom 
     }
     .cards-container{
-        @apply flex flex-wrap p-2  justify-center gap-2 text-center 
+        @apply flex flex-wrap p-2 justify-center gap-2 text-center 
         
     }
     .dialog-modal{
@@ -21,7 +25,7 @@
     }
 
     .selected-card{
-        @apply transition hover:scale-110
+        @apply transition hover:scale-125
 
     }
 
@@ -36,7 +40,7 @@
 
 .relative + .relative {
     
-    margin-left: -6rem;
+    margin-left: -5rem;
     @media (max-width: 640px)  {
         margin-left: 0rem;
         
@@ -52,8 +56,11 @@
  @media (max-width: 640px){
     
         .tarot{
-            @apply w-16 h-24 border-4 border-emerald-900 overflow-hidden rounded-sm shadow-md
+            @apply w-16 h-24 border-4  rounded-sm shadow-md
             hover:-translate-y-5 transition hover:brightness-75 hover:border-emerald-950
+        }
+        .choosen-card-button {
+            @apply -ml-8 -mt-2 p-12 bg-transparent hover:bg-transparent hover:opacity-50
         }
     
  }

@@ -14,8 +14,8 @@ export default function (){
     const [isDraw,setIsDraw]=useState(false);
     const [showResult,setShowResult]=useState(false);
     const [isOpen,setIsOpen]=useState(Array(3).fill(false))
+    const [isSelected,setIsSelected]=useState(Array(22).fill(false))
 
-    const {number}=useParams()
 
     const [cartePescate,setCartePescate]=useState([]);
 
@@ -33,6 +33,7 @@ export default function (){
         setIsDraw(!isDraw);
         setCartePescate([]);
         setMazzoOrdinato(tarots);
+        setIsSelected(Array(22).fill(false))
     };
     
     const chooseACard=(card)=>{
@@ -48,7 +49,7 @@ export default function (){
 
             for(let i=0 ;i<tempDeckmischiato.length; i++){
                 if(mazzoMischiato[i].name.includes(card.name)){
-                    tempDeckmischiato.splice(i,1)
+                  
                 }
             }
             setCartePescate(tempDeckPesca);
@@ -59,17 +60,25 @@ export default function (){
     
 //funzioni che controllano apertura e chiusura della modale
 
-    const openModal = (index) => {
-        const updatedOpenState = [...isOpen];
-        updatedOpenState[index] = true;
-        setIsOpen(updatedOpenState);
-      };
-    
-      const closeModal = (index) => {
-        const updatedOpenState = [...isOpen];
-        updatedOpenState[index] = false;
-        setIsOpen(updatedOpenState);
-      };
+const openModal = (index) => {
+    const updatedOpenState = [...isOpen];
+    updatedOpenState[index] = true;
+    setIsOpen(updatedOpenState);
+};
+
+const closeModal = (index) => {
+    const updatedOpenState = [...isOpen];
+    updatedOpenState[index] = false;
+    setIsOpen(updatedOpenState);
+};
+
+//funzione che blocca la card scelta
+      const disableCard = (index) =>{
+        const disableCardState = [...isSelected];
+        disableCardState[index]=true;
+        setIsSelected(disableCardState);
+      }
+
     return (
         <>
             <div className="bg-gradient-to-b from-second to-quart tarot-page p-4 h-max overflow-scroll bg-scroll">
@@ -81,17 +90,28 @@ export default function (){
                     <div className="cards-container ">
                         {mazzoMischiato.map(((card,i)=>{
                             return(
-                                <div
-                                    className={`tarot flex-shrink-0 relative pile`} 
-                                    key={`card-${i}`}
-                                    onClick={()=>{
-                                        chooseACard(card)
-                                    }}
-                                    >
-                                        <Tarot
-                                            imgURL={dorso}
-                                        />
-                                </div>
+                                
+                                    <div
+                                        className={`tarot flex-shrink-0 relative pile ${isSelected[i]? 'brightness-50' : ''}`}
+                                        key={`card-${i}`}
+                                    
+                                        >
+                                            <Tarot
+                                                imgURL={dorso}
+                                            />
+                                    <button
+                                        disabled={isSelected[i]}
+                                        className={`choosen-card-button absolute p-40 -ml-14 
+                                        bg-transparent border-bg-transparent 
+                                        hover:bg-transparent hover:border-bg-transparent
+                                        `} 
+                                        onClick={()=>{
+                                            chooseACard(card)
+                                            disableCard(i)
+                                    }}>
+                                    </button>
+                                    </div>
+                                
                             )
                         }))}
                     </div>
@@ -107,8 +127,9 @@ export default function (){
                     {cartePescate && 
                         cartePescate.map((card,i)=>{
                             return(
-                                <div className="w-28" key={`choosen${card.name}${i}`}>
-                                    <div className={`tarot selected-card transition-all
+                                <div className="w-28 m-auto" 
+                                        key={`choosen${card.name}${i}`}>
+                                    <div className={`tarot selected-card scale-105 transition-all w-28 m-auto  
                                                      ${card.straight? '' : 'rotate-180'}`}
                                                      >
                                         <Tarot
