@@ -18,7 +18,7 @@ export default function ({isOpen, closeModal, straightLecture, number, name, rev
 
     return (
         <>
-            <dialog ref={dialogRef} className="dialog-modal scroll-smooth scroll-m-2">
+            <dialog ref={dialogRef} className={`dialog-modal scroll-smooth `}>
                 <div className="flex flex-col align-middle relative">
                     <figure className=" flex border-8 border-quart rounded-md">
                         <img className="flex-shrink-0 w-full rounded shadow-lg" 

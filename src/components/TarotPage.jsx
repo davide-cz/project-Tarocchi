@@ -79,13 +79,32 @@ const closeModal = (index) => {
         setIsSelected(disableCardState);
       }
 
+     
+        const [isHovered, setIsHovered] = useState(false);
+      
+        const handleMouseEnter = () => {
+          setIsHovered(true);
+        };
+      
+        const handleMouseLeave = () => {
+          setIsHovered(false);
+        };
+      
+        const handleTouchStart = () => {
+          setIsHovered(true);
+        };
+      
+        const handleTouchEnd = () => {
+          setIsHovered(false);
+        };
+
     return (
         <>
-            <div className="bg-gradient-to-b from-second to-quart tarot-page p-4 h-max overflow-scroll bg-scroll">
+            <div className="tarot-page bg-gradient-to-b from-second to-quart tarot-page p-4 h-max overflow-scroll">
                 <button className=""
                     onClick={()=>{
                         mischiaMazzo()
-                }}>draw</button>
+                }}>mischia mazzo</button>
                 {mazzoMischiato && 
                     <div className="cards-container ">
                         {mazzoMischiato.map(((card,i)=>{
@@ -101,14 +120,20 @@ const closeModal = (index) => {
                                             />
                                     <button
                                         disabled={isSelected[i]}
-                                        className={`choosen-card-button absolute p-40 -ml-14 
+                                        className={`choosen-card-button absolute p-40 -ml-14 curs
                                         bg-transparent border-bg-transparent 
                                         hover:bg-transparent hover:border-bg-transparent
+                                        ${isHovered ? 'hover:-translate-y-5 transition hover:brightness-75' : ''}
                                         `} 
                                         onClick={()=>{
                                             chooseACard(card)
                                             disableCard(i)
-                                    }}>
+                                        }}
+                                        onMouseEnter={handleMouseEnter}
+                                        onMouseLeave={handleMouseLeave}
+                                        onTouchStart={handleTouchStart}
+                                        onTouchEnd={handleTouchEnd}
+                                    >
                                     </button>
                                     </div>
                                 
@@ -116,20 +141,19 @@ const closeModal = (index) => {
                         }))}
                     </div>
                 }
-                {cartePescate.length===3 &&
-                <button
+                <button className={` transition-opacity duration-1000 opacity-0  ${cartePescate.length===3 ? 'opacity-100' : ''}`}
                     onClick={()=>{
                         setShowResult(true)
                     }}
-                >showResult</button>}
-                
+                >showResult</button>
+               
                 <div className="cards-container results flex">
                     {cartePescate && 
                         cartePescate.map((card,i)=>{
                             return(
-                                <div className="w-28 m-auto" 
+                                <div className={`w-28 mx-auto mt-0 transition-opacity `} 
                                         key={`choosen${card.name}${i}`}>
-                                    <div className={`tarot selected-card scale-105 transition-all w-28 m-auto  
+                                    <div className={`tarot selected-card scale-105 transition-all w-28 m-auto
                                                      ${card.straight? '' : 'rotate-180'}`}
                                                      >
                                         <Tarot
@@ -139,10 +163,11 @@ const closeModal = (index) => {
                                         />
                                     </div>
                                         {showResult &&
-                                        <div>
+                                        <div className="mt-2 " >
                                             <button
                                             onClick={()=>{openModal(i)}}
-                                            >+</button>
+                                            className="text-xs font-semibold w-3/4"
+                                            >mostra significato</button>
                                             <SingleTarot
                                                 straightLecture={card.straightLecture}
                                                 number={card.number}

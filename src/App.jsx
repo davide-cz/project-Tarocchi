@@ -9,12 +9,14 @@ function App() {
 
   return (
     <>
-      <Navbar/>
-     
-      <Routes>
-        <Route path='/' element={<TarotPage/>}/>
-        <Route path='/tarots/:number' element={<SingleTarot/>}/>
-      </Routes>
+      <div className='app'>
+        <Navbar/>
+      
+        <Routes>
+          <Route path='/' element={<TarotPage/>}/>
+          <Route path='/tarots/:number' element={<SingleTarot/>}/>
+        </Routes>
+      </div>
     </>
   )
 }
