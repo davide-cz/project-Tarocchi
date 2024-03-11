@@ -33,8 +33,10 @@
     .results{
         @apply gap-4 
     }
-    button{
-        @apply border-4 border-amber-600 text-quart hover:bg-amber-600 hover:text-terz rounded-md px-2
+    .act-btn{
+        @apply  text-slate-400 bg-gradient-to-r from-blue-700 to-pink-600 hover:text-terz rounded-md p-2
+                hover:from-indigo-500 hover:to-pink-500 hover:scale-105 transition-all duration-500
+    
     }
 }
 

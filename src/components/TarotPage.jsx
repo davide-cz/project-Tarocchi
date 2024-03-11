@@ -101,7 +101,7 @@ const closeModal = (index) => {
     return (
         <>
             <div className="tarot-page bg-gradient-to-b from-second to-quart tarot-page p-4 h-max overflow-scroll">
-                <button className=""
+                <button className="act-btn"
                     onClick={()=>{
                         mischiaMazzo()
                 }}>mischia mazzo</button>
@@ -111,8 +111,14 @@ const closeModal = (index) => {
                             return(
                                 
                                     <div
-                                        className={`tarot flex-shrink-0 relative pile ${isSelected[i]? 'brightness-50' : ''}`}
+                                        className={`tarot flex-shrink-0 relative pile 
+                                        ${isHovered ? 'hover:-translate-y-5 transition hover:brightness-75' : ''}
+                                        ${isSelected[i]? 'brightness-50' : ''}`}
                                         key={`card-${i}`}
+                                        onMouseEnter={handleMouseEnter}
+                                        onMouseLeave={handleMouseLeave}
+                                        onTouchStart={handleTouchStart}
+                                        onTouchEnd={handleTouchEnd}
                                     
                                         >
                                             <Tarot
@@ -141,7 +147,7 @@ const closeModal = (index) => {
                         }))}
                     </div>
                 }
-                <button className={` transition-opacity duration-1000 opacity-0  ${cartePescate.length===3 ? 'opacity-100' : ''}`}
+                <button className={`act-btn duration-1000 opacity-0  ${cartePescate.length===3 ? 'opacity-100' : ''}`}
                     onClick={()=>{
                         setShowResult(true)
                     }}
@@ -166,7 +172,7 @@ const closeModal = (index) => {
                                         <div className="mt-2 " >
                                             <button
                                             onClick={()=>{openModal(i)}}
-                                            className="text-xs font-semibold w-3/4"
+                                            className="act-btn text-xs font-semibold w-3/4"
                                             >mostra significato</button>
                                             <SingleTarot
                                                 straightLecture={card.straightLecture}

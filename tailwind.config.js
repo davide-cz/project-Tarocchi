@@ -10,7 +10,7 @@ colors:{
   prim:'#4ea8de',
   second:'#5390d9',
   terz:'#7400b8',
-  quart:'#6930c3',
+  quart:'#8566B7',
   quint:'#3a0ca3',
 }
   },
