@@ -80,65 +80,47 @@ const closeModal = (index) => {
       }
 
      
-        const [isHovered, setIsHovered] = useState(false);
+        const [isCentered, setIsCentered] = useState(false);
       
-        const handleMouseEnter = () => {
-          setIsHovered(true);
-        };
-      
-        const handleMouseLeave = () => {
-          setIsHovered(false);
-        };
-      
-        const handleTouchStart = () => {
-          setIsHovered(true);
-        };
-      
-        const handleTouchEnd = () => {
-          setIsHovered(false);
-        };
 
     return (
         <>
             <div className="tarot-page bg-gradient-to-b from-second to-quart tarot-page p-4 h-max overflow-scroll">
                 <button className="act-btn"
                     onClick={()=>{
-                        mischiaMazzo()
+                        mischiaMazzo();
+                        setIsCentered(true)
                 }}>mischia mazzo</button>
+                <button className="act-btn"
+                    onClick={()=>{
+                        setIsCentered(false)
+                }}>distribuisci carte</button>
                 {mazzoMischiato && 
-                    <div className="cards-container ">
+                    <div className={`cards-container 
+                    ${isCentered ? 'relative -translate-x-10' : ''}`}>
                         {mazzoMischiato.map(((card,i)=>{
                             return(
                                 
                                     <div
-                                        className={`tarot flex-shrink-0 relative pile 
-                                        ${isHovered ? 'hover:-translate-y-5 transition hover:brightness-75' : ''}
-                                        ${isSelected[i]? 'brightness-50' : ''}`}
+                                        className={`tarot flex-shrink-0 pile duration-500
+                                        ${isCentered ? 'absolute translate-x-1/2 translate-y-1/2 ' : 'relative'}  
+                                        ${isSelected[i]? 'brightness-50' : ''}
+                                        `}
                                         key={`card-${i}`}
-                                        onMouseEnter={handleMouseEnter}
-                                        onMouseLeave={handleMouseLeave}
-                                        onTouchStart={handleTouchStart}
-                                        onTouchEnd={handleTouchEnd}
-                                    
                                         >
                                             <Tarot
                                                 imgURL={dorso}
                                             />
                                     <button
-                                        disabled={isSelected[i]}
+                                        disabled={isSelected[i] || isCentered }
                                         className={`choosen-card-button absolute p-40 -ml-14 curs
                                         bg-transparent border-bg-transparent 
                                         hover:bg-transparent hover:border-bg-transparent
-                                        ${isHovered ? 'hover:-translate-y-5 transition hover:brightness-75' : ''}
                                         `} 
                                         onClick={()=>{
                                             chooseACard(card)
                                             disableCard(i)
                                         }}
-                                        onMouseEnter={handleMouseEnter}
-                                        onMouseLeave={handleMouseLeave}
-                                        onTouchStart={handleTouchStart}
-                                        onTouchEnd={handleTouchEnd}
                                     >
                                     </button>
                                     </div>
@@ -161,7 +143,7 @@ const closeModal = (index) => {
                                         key={`choosen${card.name}${i}`}>
                                     <div className={`tarot selected-card scale-105 transition-all w-28 m-auto
                                                      ${card.straight? '' : 'rotate-180'}`}
-                                                     >
+                                    >
                                         <Tarot
                                             ind={card.number}
                                             cardValue={card.name}

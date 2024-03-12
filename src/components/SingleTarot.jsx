@@ -29,7 +29,7 @@ export default function ({isOpen, closeModal, straightLecture, number, name, rev
                         <h1>{number} - {name}</h1>
                         <p>{straight===true ? straightLecture : reverseLecture}</p>
                     </div>
-                    <button className="absolute top-1 right-1"
+                    <button className="act-btn font-bold absolute top-1 right-1"
                         onClick={()=>{
                             closeModal(false)
                         }}
