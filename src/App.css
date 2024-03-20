@@ -90,8 +90,9 @@
  }
  
  .backgroundImage {
-    background-image: url("./assets/sfondo.png");
+    background-image: url("./assets/sfondo-blur.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-blend-mode: difference;
   }
