@@ -29,5 +29,7 @@ colors:{
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+   require('tailwindcss-animated')
+  ],
 }

@@ -8,7 +8,7 @@
 
     .tarot{
         @apply w-28 h-40 border-8 border-quint overflow-hidden rounded-md shadow-md
-        hover:-translate-y-5 transition hover:brightness-75 hover:border-terz
+         hover:border-terz
     }
 
     img{
@@ -18,7 +18,7 @@
         @apply mb-0 align-bottom 
     }
     .cards-container{
-        @apply flex flex-wrap p-2 justify-center gap-2 text-center 
+        @apply flex flex-wrap p-2 justify-center gap-2 text-center h-auto
         
     }
     .dialog-modal{
@@ -63,14 +63,6 @@
     border-radius: 5px; /* Bordi arrotondati */
   }
 
-.relative + .relative {
-    
-    margin-left: -5rem;
-    @media (max-width: 640px)  {
-        margin-left: 0rem;
-        
-    } 
-}
 
 /* Esempio di margine negativo */
 
@@ -87,6 +79,9 @@
         .choosen-card-button {
             @apply -ml-8 -mt-2 p-12 bg-transparent hover:bg-transparent hover:opacity-50
         }
-    
+        
+        .cards-container{
+            @apply space-x-0 translate-y-0
+        }
  }
  

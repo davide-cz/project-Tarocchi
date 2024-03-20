@@ -85,44 +85,47 @@ const closeModal = (index) => {
 
     return (
         <>
-            <div className="tarot-page bg-gradient-to-b from-second to-quart tarot-page p-4 h-max overflow-scroll">
-                <button className="act-btn"
+            <div className="tarot-page bg-gradient-to-b  from-second to-quart tarot-page p-4 h-max overflow-scroll">
+                <button className="act-btn flex m-auto"
                     onClick={()=>{
                         mischiaMazzo();
                         setIsCentered(true)
                 }}>mischia mazzo</button>
-                <button className="act-btn"
+                
+                <button className={`act-btn flex mt-2 mx-auto  ${isCentered? 'animate-fade':'invisible'}`}
                     onClick={()=>{
                         setIsCentered(false)
                 }}>distribuisci carte</button>
-                {mazzoMischiato && 
-                    <div className={`cards-container 
-                    ${isCentered ? 'relative -translate-x-10' : ''}`}>
+            
+                {mazzoMischiato &&  
+                    <div className={`cards-container transition-all animate-fade
+                    ${isCentered ? 'relative' : '-space-x-20 '}`}>
                         {mazzoMischiato.map(((card,i)=>{
                             return(
                                 
                                     <div
-                                        className={`tarot flex-shrink-0 pile duration-500
-                                        ${isCentered ? 'absolute translate-x-1/2 translate-y-1/2 ' : 'relative'}  
+                                        className={`tarot hover:brightness-75 flex-shrink-0 pile duration-500 transition-all 
+                                        ${isCentered ? 'absolute animate-fade' :  'relative animate-fade hover:-translate-y-5' }  
                                         ${isSelected[i]? 'brightness-50' : ''}
+                                       
                                         `}
                                         key={`card-${i}`}
-                                        >
-                                            <Tarot
-                                                imgURL={dorso}
-                                            />
-                                    <button
-                                        disabled={isSelected[i] || isCentered }
-                                        className={`choosen-card-button absolute p-40 -ml-14 curs
-                                        bg-transparent border-bg-transparent 
-                                        hover:bg-transparent hover:border-bg-transparent
-                                        `} 
-                                        onClick={()=>{
-                                            chooseACard(card)
-                                            disableCard(i)
-                                        }}
                                     >
-                                    </button>
+                                        <Tarot
+                                            imgURL={dorso}
+                                        />
+                                        <button
+                                            disabled={isSelected[i] || isCentered || cartePescate.length===3 }
+                                            className={`choosen-card-button absolute p-40 -ml-14 curs
+                                            bg-transparent border-bg-transparent 
+                                            hover:bg-transparent hover:border-bg-transparent
+                                            `} 
+                                            onClick={()=>{
+                                                chooseACard(card)
+                                                disableCard(i)
+                                            }}
+                                        >
+                                        </button>
                                     </div>
                                 
                             )
@@ -135,13 +138,12 @@ const closeModal = (index) => {
                     }}
                 >showResult</button>
                
-                <div className="cards-container results flex">
-                    {cartePescate && 
-                        cartePescate.map((card,i)=>{
+                <div className="cards-container results flex justify-around animate-fade">
+                    {cartePescate.map((card,i)=>{
                             return(
-                                <div className={`w-28 mx-auto mt-0 transition-opacity `} 
+                                <div className={`w-28 transition-opacity `} 
                                         key={`choosen${card.name}${i}`}>
-                                    <div className={`tarot selected-card scale-105 transition-all w-28 m-auto
+                                    <div className={`tarot selected-card  scale-105 transition-all w-28 m-auto
                                                      ${card.straight? '' : 'rotate-180'}`}
                                     >
                                         <Tarot
