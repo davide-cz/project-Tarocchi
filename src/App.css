@@ -64,7 +64,7 @@
   }
 
   .app{
-    @apply h-full
+    @apply h-full bg-black
   }
 
 
