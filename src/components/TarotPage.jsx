@@ -85,14 +85,14 @@ const closeModal = (index) => {
 
     return (
         <>
-            <div className="tarot-page bg-gradient-to-b  from-second to-quart tarot-page p-4 h-max overflow-scroll">
+            <div className="tarot-page  tarot-page p-4 h-max overflow-scroll">
                 <button className="act-btn flex m-auto"
                     onClick={()=>{
                         mischiaMazzo();
                         setIsCentered(true)
                 }}>mischia mazzo</button>
                 
-                <button className={`act-btn flex mt-2 mx-auto  ${isCentered? 'animate-fade':'invisible'}`}
+                <button className={`act-btn flex mt-2 mx-auto transition-opacity opacity-0  ${isCentered? 'opacity-100':'opacity-0'}`}
                     onClick={()=>{
                         setIsCentered(false)
                 }}>distribuisci carte</button>
@@ -173,7 +173,7 @@ const closeModal = (index) => {
                                     {showResult &&
                                     <div>
                                         <h4 
-                                            className="flex justify-center text-center w-auto">{card.number} {card.name}</h4>
+                                            className="flex justify-center text-center text-stone-200 w-auto">{card.number} {card.name}</h4>
                                     </div>
                                     }
                                 </div>

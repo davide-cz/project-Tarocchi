@@ -85,3 +85,9 @@
         }
  }
  
+ .backgroundImage {
+    background-image: url("./assets/sfondo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
