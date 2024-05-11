@@ -54,7 +54,6 @@ export default function (){
             }
             setCartePescate(tempDeckPesca);
             setMazzoMischiato(tempDeckmischiato)
-            console.log(card)
         }
     };
     
@@ -92,7 +91,8 @@ const closeModal = (index) => {
                         setIsCentered(true)
                 }}>mischia mazzo</button>
                 
-                <button className={`act-btn flex mt-2 mx-auto transition-opacity opacity-0  ${isCentered? 'opacity-100':'opacity-0'}`}
+                <button className={`act-btn flex mt-2 mx-auto opacity-0  ${isCentered? 'opacity-100':'opacity-0'}`}
+                    disabled={!isCentered}
                     onClick={()=>{
                         setIsCentered(false)
                 }}>distribuisci carte</button>
@@ -132,18 +132,18 @@ const closeModal = (index) => {
                         }))}
                     </div>
                 }
-                <button className={`act-btn duration-1000 opacity-0  ${cartePescate.length===3 ? 'opacity-100' : ''}`}
+                <button className={`act-btn flex mx-auto my-4  opacity-0  ${cartePescate.length===3 ? 'duration-1000 opacity-100' : 'opacity-0 duration-0'}`}
                     onClick={()=>{
                         setShowResult(true)
                     }}
-                >showResult</button>
+                >Rivela Carte</button>
                
                 <div className="cards-container results flex justify-around animate-fade">
                     {cartePescate.map((card,i)=>{
                             return(
                                 <div className={`w-28 transition-opacity `} 
                                         key={`choosen${card.name}${i}`}>
-                                    <div className={`tarot selected-card  scale-105 transition-all w-28 m-auto
+                                    <div className={`tarot selected-card animate-fade scale-105 transition-all w-28 m-auto
                                                      ${card.straight? '' : 'rotate-180'}`}
                                     >
                                         <Tarot
@@ -153,10 +153,10 @@ const closeModal = (index) => {
                                         />
                                     </div>
                                         {showResult &&
-                                        <div className="mt-2 " >
+                                        <div className="my-4" >
                                             <button
                                             onClick={()=>{openModal(i)}}
-                                            className="act-btn text-xs font-semibold w-3/4"
+                                            className="act-btn mt-2 text-xs font-semibold w-3/4"
                                             >mostra significato</button>
                                             <SingleTarot
                                                 straightLecture={card.straightLecture}
